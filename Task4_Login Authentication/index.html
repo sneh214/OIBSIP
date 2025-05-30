@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2 id="form-title">Login</h2>
+
+    <form id="authForm">
+      <input type="text" id="username" placeholder="Username" required />
+      
+      <input type="password" id="password" placeholder="Password" required />
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" style="display: none;" required />
+      
+      <div class="toggle-container">
+        <input type="checkbox" id="showPassword" />
+        <label for="showPassword">Show Password</label>
+      </div>
+
+      <div class="strength" id="strengthMeter"></div>
+
+      <div class="toggle-container">
+        <input type="checkbox" id="rememberMe" />
+        <label for="rememberMe">Remember Me</label>
+      </div>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p id="toggleText">Don't have an account? <a href="#" id="toggleLink">Register here</a></p>
+
+    <div id="securePage" style="display: none;">
+      <h2>Welcome, <span id="loggedInUser"></span>!</h2>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
